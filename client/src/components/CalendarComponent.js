@@ -99,6 +99,11 @@ function CalendarComponent() {
                     <Td>{new Date(event.start?.dateTime || event.start?.date).toLocaleDateString()}</Td>
                     <Td>{event.summary}</Td>
                     <Td>{event.attendees?.[0]?.email || "N/A"}</Td>
+                    <Td> <Td>
+                    <Button onClick={() => handleKnowMore(event.attendees?.[0]?.email)}>
+                        Know More
+                    </Button>
+                    </Td> </Td>
                   </Tr>
                 ))}
               </Tbody>
