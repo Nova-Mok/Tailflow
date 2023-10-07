@@ -389,6 +389,8 @@ function AttendeeInfo() {
                     No search results available.{" "}
                   </Text>
                 )}
+                <hr />
+                <Text> Upcoming Events from {companyData.name || "N/A"}</Text>
 
                 <div className="d-flex justify-content-start align-items-center">
                   <MDBCardText className="text-uppercase mb-0">
@@ -399,13 +401,13 @@ function AttendeeInfo() {
                   </MDBCardText>
                   <MDBCardText className="text-uppercase mb-0">
                     <MDBIcon fas icon="ellipsis-h ms-4 me-2" />{" "}
-                    <span className="text-muted small">program link</span>{" "}
+                    <span className="text-muted small">Flag Results</span>{" "}
                     <span className="ms-3 me-4">|</span>
                   </MDBCardText>
                   <a href="#!">
                     <MDBCardImage
                       width="35"
-                      src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-2.webp"
+                      src="https://cdn-icons-png.flaticon.com/128/6008/6008363.png?ga=GA1.1.1563851258.1694609348&track=ais"
                       alt="avatar"
                       className="rounded-circle me-3"
                       fluid
