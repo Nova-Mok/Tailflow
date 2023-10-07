@@ -82,6 +82,30 @@ app.get('/company/:domain', async (req, res) => {
     }
 });
 
+app.get('/search/:email', async (req, res) => {
+  const email = req.params.email;
+  const [name, domain] = email.split('@'); // Splitting the email to get the name before @ and domain after @
+
+  try {
+      const response = await axios.get('https://www.googleapis.com/customsearch/v1', {
+          params: {
+              key: 'AIzaSyAZM_cVn4hiB5o-41Q_dmD41WeXUsRVR1E',
+              cx: 'a6c942d87912f4ba7',
+              q: email,
+              exactTerms: name,
+              imgType: 'face',
+              num: 1
+          }
+      });
+
+      res.json(response.data);
+  } catch (error) {
+      console.error("Error fetching data from Google Custom Search:", error.message);
+      res.status(500).send("Failed to fetch data from Google Custom Search");
+  }
+});
+
+
 
 app.listen(3001, () => {
     console.log('Server is running on port 3001');

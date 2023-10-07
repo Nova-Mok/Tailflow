@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import './index.css';  // Default styling, can be modified or removed
 import App from './App';
 import { ChakraProvider } from '@chakra-ui/react';
